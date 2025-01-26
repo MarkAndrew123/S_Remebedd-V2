@@ -14,10 +14,14 @@ const App = () => {
 
         
           <Route 
+
+
+
+
             path="/dashboard" 
             element={
               localStorage.getItem('token') ? 
-                <SupersetDashboard src='https://mypartnershipview.mtn.ng/superset/dashboard/p/R3EPObbbKBD/' /> : 
+                <SupersetDashboard src='/' /> : 
                 <p>Please log in first.</p>
             } 
           />
