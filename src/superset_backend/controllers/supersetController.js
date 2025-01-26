@@ -3,7 +3,7 @@ const axios = require('axios');
 exports.getSupersetGuestToken = async (req, res) => {
     try {
         
-        const loginResponse = await axios.post('https://mypartnershipview.mtn.ng/api/v1/security/login', {
+        const loginResponse = await axios.post('', {
             username: 'admin', 
             password: 'admin_password',
             provider: 'db',
@@ -15,13 +15,13 @@ exports.getSupersetGuestToken = async (req, res) => {
         const accessToken = loginResponse.data.access_token;
 
         
-        const guestTokenResponse = await axios.post('https://mypartnershipview.mtn.ng/superset/api/v1/security/guest_token', {
-            resources: [{ type: 'dashboard', id: '74ac2956-bb71-4411-985e-9ae5f010886e' }],
+        const guestTokenResponse = await axios.post('', {
+            resources: [{ type: 'dashboard', id: '' }],
             rls: [],
             user: {
-                username: 'partner',
-                first_name: 'report-viewer',
-                last_name: 'report-viewer'
+                username: '',
+                first_name: '',
+                last_name: ''
             }
         }, {
             headers: {
